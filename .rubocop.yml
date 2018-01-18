@@ -1,0 +1,13 @@
+inherit_from: .rubocop_todo.yml
+
+Style/ClassVars:
+  Enabled: false
+
+Metrics/AbcSize:
+  Enabled: false
+
+Naming/AccessorMethodName:
+  Enabled: false
+
+Metrics/LineLength:
+  Enabled: false
