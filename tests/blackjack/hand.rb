@@ -41,6 +41,7 @@ class Hand
 
     if dealt_cards.first.show == false
       first_value = VALUES[dealt_cards.first.rank.to_sym]
+      first_value += 10 if dealt_cards.first.rank == 'Ace'
       report + 'Total value: ' + (get_value - first_value).to_s
     else
       report + 'Total value: ' + get_value.to_s

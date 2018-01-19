@@ -119,5 +119,17 @@ RSpec.describe Hand do
 
       expect(@hand.to_s).to eq('Ace of Clubs, Total value: 11')
     end
+
+    it 'returns the correct output if #show is false for first card and it is an Ace' do
+      card1 = Card.new('Clubs', 'Ace')
+      card2 = Card.new('Diamonds', 'Jack')
+      card1.show = false
+
+      @hand.add_card(card1)
+      @hand.add_card(card2)
+
+      # expect(@hand.get_value).to eq(14)
+      expect(@hand.to_s).to eq('Jack of Diamonds, Total value: 10')
+    end
   end
 end
